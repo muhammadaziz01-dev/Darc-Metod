@@ -1,0 +1,222 @@
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+label{
+    width: 500px;
+    height: 200px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 200px;
+    box-shadow: inset 0px 5px 15px rgb(0, 0, 0,0.4) ,inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+label::after{
+    content: "";
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 180px;
+    background: linear-gradient(180deg, #ffffff, #40a4d5);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+input{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+
+}
+input:checked + label{
+    background: #242424;
+}
+
+input:checked + label::after{
+    left: 490px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a );
+
+}
+
+label:active::after{
+    width: 250px;
+}
+
+.backgraund{
+    width: 100vw;
+    height: 100vh;
+    background: #ffff;
+    z-index: -1;
+    position: absolute;
+    transition: 0.3s;
+}
+
+input:checked + label + .backgraund{
+     background: #242424;
+}
+
+label img{
+    display: inline-block;
+    position: absolute;
+    width: 120px;
+    top: 40px;
+    z-index: 100;
+}
+
+label img.sun{
+    left: 40px;
+    transition: 0.3s;
+}
+
+label img.moon{
+    left: 340px;
+    transition: 0.3s;
+}
+
+.colud{
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    left: 7%;
+
+}
+.colud2{
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+    left: 57%;
+
+}
+.colud3{
+    display: inline-block;
+    position: absolute;
+    top: 54%;
+    left: 45%;
+
+}
+
+.star1{
+    display: inline-block;
+    position: absolute;
+    top: 39%;
+    left: 27%;
+    display:none;
+    
+}
+
+.star1 img{
+    display: inline-block;
+    width: 120px;
+    height: 120px
+    
+}
+.star2{
+    display: inline-block;
+    position: absolute;
+    top: 35%;
+    left: 58%;
+    display:none;
+    
+}
+
+.star2 img{
+    display: inline-block;
+    width: 120px;
+    height: 120px
+    
+}
+.star3{
+    display: inline-block;
+    position: absolute;
+    top: 55%;
+    left: 32%;
+    display:none;
+    
+}
+
+.star3 img{
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    
+}
+
+.star4{
+    display: inline-block;
+    position: absolute;
+    top: 48%;
+    left: 67%;
+    display:none;
+    
+}
+
+.star4 img{
+    display: inline-block;
+    width: 120px;
+    height: 120px
+    
+}
+.star5{
+    display: inline-block;
+    position: absolute;
+    top: 62%;
+    left: 60%;
+    display:none;
+    
+}
+
+.star5 img{
+    display: inline-block;
+    width: 120px;
+    height: 120px
+    
+}
+
+
+input:checked ~  .colud {
+     display: none;
+}
+
+input:checked ~  .colud2 {
+    display: none;
+
+}
+
+input:checked ~  .colud3 {
+    display: none;
+
+}
+
+input:checked ~  .star1 {
+    display: block;
+
+}
+input:checked ~  .star2 {
+    display: block;
+
+}
+input:checked ~  .star3 {
+    display: block;
+
+}
+input:checked ~  .star4 {
+    display: block;
+
+}
+input:checked ~  .star5 {
+    display: block;
+
+}
+
